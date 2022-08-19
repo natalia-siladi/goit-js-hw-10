@@ -1,8 +1,8 @@
-const BASE_URL = "https://restcountries.com/v3.1/"
-export function fetch(name) {
-
+export function fetchCountries(name) {
+    const BASE_URL = "https://restcountries.com/v3.1/"
     return fetch(
-        `${BASE_URL}/name/${name}?fields=name,capital,population,flags,languages`)
+        `${BASE_URL}name/${name}?`
+    )
         .then(response => {
             if (response.status === 200) {
                 return response.json();
